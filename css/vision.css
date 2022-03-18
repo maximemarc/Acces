@@ -1,0 +1,132 @@
+body
+	{
+	margin: 0 auto;
+	}
+
+#global
+	{
+	height :100%;
+	width: 100%;
+	}
+
+#main
+	{
+	display: flex;
+	}
+	
+#top, #left, span
+	{ 
+	position : absolute; 
+	z-index : 50;
+	}
+
+
+#left
+	{
+	top:50px;
+	background-color: aquamarine;
+	}
+#right
+	{
+	margin-top: 50px;
+	margin-left:401px;
+	}
+#top
+	{
+	margin-left:401px;	
+	text-align: center;	
+	display: flex;
+	background-color: aquamarine;
+	}
+
+span
+	{
+	background-color: aquamarine;
+	height: 50px;
+	width: 400px;
+	z-index : 100;
+	border: 1px solid black;
+	}
+
+#head
+	{
+	display: flex;
+	}
+.dos
+	{
+	width: 400px;
+	height: 50px;
+	border: 1px solid black;	
+	}
+
+.log
+	{
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;	
+	}
+
+.line
+	{
+	display: flex;;
+	}
+
+.rouge
+	{
+	width: 100px;
+	height: 50px;
+	background-color: red;
+	border: 1px solid black;
+	}
+
+.vert
+	{
+	width: 100px;
+	height: 50px;
+	background-color: green;
+	border: 1px solid black;
+	}
+
+.rien
+	{
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	}
+
+.ligne
+{
+	display: flex;
+}
+
+#rouge
+	{
+	width: 50px;
+	height: 25px;
+	background-color: red;
+	border: 1px solid black;
+	}
+
+#vert
+	{
+	width: 50px;
+	height: 25px;
+	background-color: green;
+	border: 1px solid black;
+	}
+
+#rien
+	{
+	width: 50px;
+	height: 25px;
+	border: 1px solid black;
+	}
+
+#legende
+	{
+	position:fixed;
+	bottom:1%;
+	right:1%;
+	z-index:9999;
+	background-color: white;
+	}
