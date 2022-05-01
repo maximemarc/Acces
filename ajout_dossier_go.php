@@ -1,6 +1,9 @@
 <?php
 require('connect.php');
-
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("location: index.php");
+}
 $dossier = pg_escape_literal($_POST['dossier']);
 $index = pg_escape_literal($_POST['index']);
 $index_dos_parent = $_POST['index_dos_parent'];
@@ -28,7 +31,7 @@ if ($query) {
     $query = pg_query($rins);
 } else {
     echo 'Erreur d\'enregistrement, consultez un administrateur !';
-    echo '<a href="gestion_droit.php">Retour à la Gestion des droits</a>';
+    echo '<a href="index.php">Retour à la Gestion des droits</a>';
     exit();
 }
-header('Location: gestion_droit.php');
+header('Location: index.php');

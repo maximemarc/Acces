@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -13,15 +13,14 @@ session_start();
 	<meta http-equiv="content-style-type" content="text/css">
 	<meta http-equiv="expires" content="0">
 	<link href="css/index.css" rel="stylesheet" type="text/css">
-	<link href="img/favicon.png" rel="shortcut icon" type="image/png">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="img/logo.png" rel="shortcut icon" type="image/png">
+	<link href="css/Roboto.ttf" rel="stylesheet">
 	<script src="js/ajax.js"></script>
 </head>
 
 <body>
 	<header>
 		<div id="logo">
-			<img src="img/logo.png" />
 		
 		<div id="deco">
 			<?php

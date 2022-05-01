@@ -1,9 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['admin'])) {
-    header("location: index.php");
-}
-require_once('connect.php');
+require('connect.php');
 require('entete.php');
 ?>
 <script type="text/javascript">
@@ -15,7 +11,6 @@ require('entete.php');
             }
         }
 </script>
-
     <?php
     $s4 = 'select index , dossier as dos, id_dos from dossier order by index';
     $r4 = pg_query($s4);
@@ -65,4 +60,4 @@ require('entete.php');
 
         ?>
         </table>
-        <button class="bouton3" onclick="window.location.href='gestion_droit.php'">retour</button>
+        <button class="bouton3" onclick="window.location.href='index.php'">retour</button>

@@ -5,12 +5,7 @@ body
 	background-color: #1C2942;
 	font-family: 'Roboto', Arial, sans-serif;
 	}
-	@font-face {
-		font-family: "Open Sans";
-		src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-			   url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 
-			}
 header
 	{
 	width: 100%;

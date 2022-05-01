@@ -1,15 +1,16 @@
 <?php
-session_start();
-if (!isset($_SESSION['admin'])) {
+
+require('entete.php');
+if (!isset($_SESSION['login'])) {
     header("location: index.php");
 }
 
-require('entete.php');
+
 require_once('connect.php');
 ?>
  
 <form action="ajout_dossier_go.php" id="form_ajout" method="POST"> 
-	<a style="color: #080710;"class="bouton" onclick="window.location.href='gestion_droit.php'">Retour</a>
+	<a style="color: #080710;"class="bouton" onclick="window.location.href='index.php'">Retour</a>
 	<h3>Ajouter un Dossier</h3>
 	<label for="dossier">Nom du Dossier</label>
 	<input type="text" name="dossier" placeholder="Nom du Dossier"  required="required" />

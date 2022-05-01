@@ -1,7 +1,8 @@
 <?php
-if (isset($_SESSION['admin'])) {
-    header("location: index.php");
-}
+    session_start();
+    if (!isset($_SESSION['login'])) {
+        header("location: index.php");
+    }
 require('connect.php');
 $taille = count($_POST['dos']);
 $max = intval(pg_fetch_all(pg_query('select max(id_a) as max from attribution'))[0]['max']);
@@ -35,11 +36,11 @@ for ($i = 0; $i < $taille; $i++) {
 	if ($query) {
 		$rins = 'update modifs set modif = false where id_modifs = 0';
 		$query = pg_query($rins);
-		header('Location: gestion_droit.php?id='.$id_ac);
+		header('Location: index.php?id='.$id_ac);
 	} else {
 		
 		echo 'Erreur d\'enregistrement, consultez un administrateur !';
-		echo '<a href="gestion_droit.php?id='.$id_ac.'">Retour à la Gestion des droits</a>';
+		echo '<a href="index.php?id='.$id_ac.'">Retour à la Gestion des droits</a>';
 		exit();
 	}
 }

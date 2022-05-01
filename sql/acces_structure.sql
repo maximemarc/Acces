@@ -1,5 +1,4 @@
 begin transaction;
-Create type groupe AS ENUM('global', 'local');
 
 Create TABLE administrateur
     (
@@ -17,18 +16,6 @@ CREATE TABLE account
 	mail varchar (100)
     );
 
-CREATE TABLE droit_l
-    (
-	id_l integer primary Key,
-	gl groupe 
-    );
-
-CREATE TABLE droit_e
-    (
-	id_e integer primary Key,
-	gl groupe
-    );
-
 CREATE TABLE dossier
     (
 	id_dos  integer primary Key,
@@ -42,8 +29,14 @@ CREATE TABLE attribution
 	id_a integer primary Key,
 	id_ac integer references account (id_ac),
 	id_dos integer references dossier (id_dos),
-	id_l integer references droit_l (id_l),
-	id_e integer references droit_e (id_e)
+	id_l bool,
+	id_e bool
+    );
+
+CREATE TABLE modifs
+    (
+	id_modifs integer primary Key,
+	modif bool
     );
 
 commit;

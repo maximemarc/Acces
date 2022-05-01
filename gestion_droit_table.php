@@ -96,28 +96,34 @@ require_once('connect.php');
             if ($tab3 == null) {
                 echo '<td class="id_l">';
                 echo '<input type="hidden" name="id_l[]" id="l' . $i . '" value="0">';
-                echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" ' . $disabled . '/> ';
+                echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" '
+                 . $disabled . '/> ';
                 echo '</td><td class="id_e">';
                 echo '<input type="hidden" name="id_e[]" id="e' . $i . '" value="0">';
-                echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" ' . $disabled . '/> ';
+                echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" '
+                 . $disabled . '/> ';
                 echo '</td>';
             } else {
                 foreach ($tab3 as $t) {
                     echo '<td class="id_l">';
                     if ($t['id_l'] == 1) {
                         echo '<input type="hidden" name="id_l[]" id="l' . $i . '" value="1" />';
-                        echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="0" checked ="checked" ' . $disabled . '/> ';
+                        echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" 
+                        value="0" checked ="checked" ' . $disabled . '/> ';
                     } else {
                         echo '<input type="hidden" name="id_l[]" id="l' . $i . '" value="0">';
-                        echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" ' . $disabled . '/> ';
+                        echo '<input type="checkbox"  onchange="document.getElementById(\'l' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;"
+                         value="1" ' . $disabled . '/> ';
                     }
                     echo '</td><td class="id_e">';
                     if ($t['id_e'] == 1) {
                         echo '<input type="hidden" name="id_e[]" id="e' . $i . '" value="1" />';
-                        echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="0" checked ="checked" ' . $disabled . '/> ';
+                        echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" 
+                        value="0" checked ="checked" ' . $disabled . '/> ';
                     } else {
                         echo '<input type="hidden" name="id_e[]" id="e' . $i . '" value="0">';
-                        echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" value="1" ' . $disabled . '/> ';
+                        echo '<input type="checkbox"  onchange="document.getElementById(\'e' . $i . '\').value = this.value; (this.value ==0)?this.value = 1:this.value = 0;" 
+                        value="1" ' . $disabled . '/> ';
                     }
                     echo '</td>';
                 }

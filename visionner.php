@@ -1,14 +1,14 @@
 
 <?php
-session_start();
+
+require('entete2.php');
 if (!isset($_SESSION['login'])) {
     header("location: index.php");
 }
-require('entete2.php');
 require_once('connect.php');
 if ($c) { 
     echo '<body>';
-    echo '<span><button class="bouton3" onclick="window.location.href=\'gestion_droit.php\'">retour</button></span>';
+    echo '<span><button class="bouton3" onclick="window.location.href=\'index.php\'">retour</button></span>';
     echo '<div id="legende">';
     echo '<div class="ligne">';
     echo '<div id="rouge"></div>';
@@ -79,7 +79,9 @@ if ($c) {
         foreach ($tab4 as $l) 
             { 
             
-            $s = 'select id_l,id_e,login,dossier from attribution join dossier on attribution.id_dos = dossier.id_dos join account on attribution.id_ac = account.id_ac where attribution.id_dos = \''.$l['id'].'\'  and login = \''.$tab1[$i]['login'].'\'  and nom is not null and prenom is not null order by nom asc, index asc';
+            $s = 'select id_l,id_e,login,dossier from attribution join dossier on attribution.id_dos = dossier.id_dos 
+            join account on attribution.id_ac = account.id_ac where attribution.id_dos = \''.$l['id'].'\'  and login = \''.$tab1[$i]['login'].'\'  
+            and nom is not null and prenom is not null order by nom asc, index asc';
             $r = pg_query($s);
             $tab = pg_fetch_all($r);
             if($tab == null || $tab =='' || $tab == false)
