@@ -3,12 +3,12 @@ require('entete.php');
 if (!isset($_SESSION['login'])) {
 ?>
 	<form id="form_con" action="connexion.php" method="post">
-		<h3>Connection</h3>
+		<h3>Connexion</h3>
 		<label for="log">Identifiant</label>
 		<input type="text" name="log" placeholder="identifiant" />
 		<label for="mdp">Mot de passe</label>
 		<input type="password" name="mdp" placeholder="Mot de passe" />
-		<button id="con">Connection</button>
+		<button id="con">Connexion</button>
 		<br><br>
 		<span>
 			<?php
